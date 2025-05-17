@@ -61,3 +61,24 @@
     <script type="module" src="index.js"></script>
 </body>
 </html>
+```
+
+**Instrucciones para modificar `index.js` (basado en el código que te proporcioné anteriormente):**
+
+Dentro de tu archivo `index.js`, localiza la función `displayQuestion()`. Dentro de esta función, encontrarás la línea donde se establecen las clases para los botones de opción.
+
+La línea que tenías seleccionada y que modificamos anteriormente era:
+`button.className = 'option-button w-full bg-blue-400 hover:bg-blue-500 text-white p-3 sm:p-4 rounded-lg text-left transition-colors duration-150 border-2 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200';`
+
+Ahora, para que los botones de opción tengan un fondo gris claro (como `bg-gray-200`) y texto negro (`text-black` o `text-gray-800`), deberás cambiarla a:
+
+`button.className = 'option-button w-full bg-gray-200 hover:bg-gray-300 text-black p-3 sm:p-4 rounded-lg text-left transition-colors duration-150 border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400';`
+
+**Resumen de los cambios en la clase del botón de opción en `index.js`:**
+* `bg-blue-400` cambia a `bg-gray-200` (fondo gris claro).
+* `hover:bg-blue-500` cambia a `hover:bg-gray-300` (un gris ligeramente más oscuro para el hover).
+* `text-white` cambia a `text-black` (o `text-gray-800` si prefieres un negro menos intenso).
+* `border-blue-300` cambia a `border-gray-300` (borde que combine con el fondo gris).
+* `focus:ring-blue-200` cambia a `focus:ring-gray-400` (anillo de foco que combine).
+
+Al realizar este cambio en tu archivo `index.js`, los botones de las opciones se generarán con el nuevo estilo gris claro y texto negro que deseas, similar al contenedor de la explicación. El resto del HTML en el Canvas que te he mostrado permanece igual, ya que los estilos de los botones de opción se aplican dinámicamen
