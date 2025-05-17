@@ -1,33 +1,50 @@
-/* index.css */
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', sans-serif; /* Asegura que la fuente Inter se aplique */
+}
+
+/* Estilo base para los botones de opción - se aplicará desde JS */
+.option-button-base {
+    background-color: #38bdf8; /* sky-500 (azul claro para opciones) */
+    color: white; /* Texto de opciones en blanco */
+    border-color: #0ea5e9; /* sky-600 (un azul un poco más oscuro para el borde) */
+}
+.option-button-base:hover {
+    background-color: #0ea5e9; /* sky-600 */
 }
 
 /* Estilo para feedback visual de opciones */
-.correct-answer {
-    background-color: #2dd4bf !important; /* Tailwind teal-500 */
+.correct-answer { /* Cuando el usuario acierta Y es la correcta */
+    background-color: #10b981 !important; /* emerald-500 (verde para correcta) */
     color: white !important;
-    border-color: #0d9488 !important; /* Tailwind teal-700 */
+    border-color: #059669 !important; /* emerald-700 */
 }
 
-.incorrect-answer-user {
-    background-color: #f87171 !important; /* Tailwind red-400 */
+.incorrect-answer-user { /* Cuando el usuario falla (su selección) */
+    background-color: #ef4444 !important; /* red-500 (rojo para incorrecta del usuario) */
     color: white !important;
-    border-color: #dc2626 !important; /* Tailwind red-600 */
+    border-color: #dc2626 !important; /* red-600 */
 }
+
+/* Si la opción era la correcta pero el usuario no la eligió, también se resalta en verde */
+.option-button.correct-highlight {
+    background-color: #10b981 !important; /* emerald-500 */
+    color: white !important;
+    border-color: #059669 !important; /* emerald-700 */
+}
+
 
 .option-button:disabled {
-    opacity: 0.7;
+    opacity: 0.8; /* Un poco menos opaco para que se vea el color de feedback */
     cursor: not-allowed;
 }
 
-.option-button.correct-highlight {
-    background-color: #34d399; /* Tailwind green-400 */
-    color: white;
+/* Ajustes para los mensajes de feedback de texto */
+.temp-feedback.text-green-400 {
+    color: #22c55e; /* green-500 para mejor contraste en fondo claro */
 }
 
-.option-button.incorrect-highlight {
-     background-color: #f87171; /* Tailwind red-400 */
-    color: white;
+.temp-feedback.text-red-400 {
+    color: #ef4444; /* red-500 */
 }
