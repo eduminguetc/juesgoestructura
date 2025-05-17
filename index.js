@@ -282,7 +282,7 @@ function displayQuestion() {
         const button = document.createElement('button');
         button.textContent = option;
         // Clases de Tailwind para estilo y responsividad
-        button.className = 'option-button w-full bg-slate-600 hover:bg-slate-500 text-slate-100 p-3 sm:p-4 rounded-lg text-left transition-colors duration-150 border-2 border-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50';
+        button.className = 'option-button w-full bg-sky-500 hover:bg-sky-600 text-white p-3 sm:p-4 rounded-lg text-left transition-colors duration-150 border-2 border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-300';
         button.dataset.index = index;
         button.addEventListener('click', handleAnswer);
         optionsContainer.appendChild(button);
